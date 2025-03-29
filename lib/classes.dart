@@ -1,16 +1,15 @@
+import 'package:e_she_book/topics/body_protection.dart';
+import 'package:e_she_book/topics/eye_protection.dart';
+import 'package:e_she_book/topics/fall_protection.dart';
+import 'package:e_she_book/topics/foot_protection.dart';
+import 'package:e_she_book/topics/hand_protection.dart';
+import 'package:e_she_book/topics/head_protection.dart';
+import 'package:e_she_book/topics/ppe_intro.dart';
+import 'package:e_she_book/topics/respiratory_protection.dart';
 import 'package:flutter/material.dart';
 import 'package:shared_preferences/shared_preferences.dart';
 import 'package:e_she_book/welcome.dart';
 import 'certificate_page.dart';
-
-import 'package:e_she_book/topics/common_causes.dart' as commonCauses;
-import 'package:e_she_book/topics/fire_emergency.dart' as fireEmergency;
-import 'package:e_she_book/topics/fire_safety.dart' as fireSafety;
-import 'package:e_she_book/topics/fire_extinguishers.dart' as fireExtinguishers;
-import 'package:e_she_book/topics/fire_prevention.dart' as firePrevention;
-import 'package:e_she_book/topics/first_aid.dart' as firstAid;
-import 'package:e_she_book/topics/handling_extinguishers.dart' as handlingExtinguishers;
-import 'package:e_she_book/topics/industrial_safety.dart' as industrialSafety;
 
 class ClassPage extends StatefulWidget {
   @override
@@ -23,14 +22,14 @@ class _ClassPageState extends State<ClassPage> {
   String userName = "";
 
   final List<Map<String, dynamic>> topics = [
-    {"title": "Introduction to Fire Safety", "page": fireSafety.FireSafetyPage(), "key": "FireSafety"},
-    {"title": "Common Causes of Fire", "page": commonCauses.CommonCausesPage(), "key": "CommonCauses"},
-    {"title": "Fire Extinguisher Types & Uses", "page": fireExtinguishers.FireExtinguishersPage(), "key": "FireExtinguishers"},
-    {"title": "Fire Prevention Techniques", "page": firePrevention.FirePreventionPage(), "key": "FirePrevention"},
-    {"title": "Fire Emergency Procedures", "page": fireEmergency.FireEmergencyPage(), "key": "FireEmergency"},
-    {"title": "Handling Fire Extinguishers", "page": handlingExtinguishers.HandlingExtinguishersPage(), "key": "HandlingExtinguishers"},
-    {"title": "Industrial Fire Safety", "page": industrialSafety.IndustrialSafetyPage(), "key": "IndustrialSafety"},
-    {"title": "First Aid for Fire Injuries", "page": firstAid.FirstAidPage(), "key": "FirstAidForFireInjuries"},
+    {"title": "Introduction to PPE", "page": IntroductionToPPEPage(), "key": "IntroductionToPPE"},
+    {"title": "Head Protection", "page": HeadProtectionPage(), "key": "HeadProtection"},
+    {"title": "Eye Protection", "page": EyeProtectionPage(), "key": "EyeProtectionPage"},
+    {"title": "Hand Protection", "page": HandProtectionPage(), "key": "HandProtectionPage"},
+    {"title": "Respiratory Protection ", "page": RespiratoryProtectionPage(), "key": "RespiratoryProtectionPage"},
+    {"title": "Foot Protection", "page": FootProtectionPage(), "key": "FootProtectionPage"},
+    {"title": "Body Protection", "page": BodyProtectionPage(), "key": "BodyProtectionPage"},
+    {"title": "Fall Protection", "page": FallProtectionPage(), "key": "FallProtectionPage"},
   ];
 
   @override
